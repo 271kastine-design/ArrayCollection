@@ -117,4 +117,18 @@ public class ArrayCollection<T> implements CollectionInterface<T>
   {
     return numElements;
   }
+
+  @Override
+  public String toString()
+  {
+    StringBuilder result = new StringBuilder("[");
+    for (int i = 0; i < numElements; i++)
+    {
+      if (i > 0)
+        result.append(", ");
+      result.append(elements[i]);
+    }
+    result.append("]");
+    return result.toString();
+  }
 }
