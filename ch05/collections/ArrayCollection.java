@@ -20,11 +20,13 @@ public class ArrayCollection<T> implements CollectionInterface<T>
   protected boolean found;  // true if target found, otherwise false
   protected int location;   // indicates location of target if found
 
+  @SuppressWarnings("unchecked")
   public ArrayCollection() 
   {
     elements = (T[]) new Object[DEFCAP];
   }
 
+  @SuppressWarnings("unchecked")
   public ArrayCollection(int capacity) 
   {
     elements = (T[]) new Object[capacity];
